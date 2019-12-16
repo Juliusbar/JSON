@@ -12,7 +12,7 @@ Warning: this library is still under development.
 ## Data Structures
 
 JSON C library forms 2 structures object and value.  
-
+```
 Object       Value  
 +-------+    +-------+  
 |name   |    |type   |  
@@ -22,7 +22,7 @@ Object       Value
    |            |  
    V            V  
 Object        Value  
-
+```
 Object:  
 ```
 struct json_object{
@@ -62,7 +62,7 @@ Value types
 JSON example:  
 ```
 { "name" : "value" }
-```
+
 Object       Value  
 +-------+    +-------+  
 |name   |    |type 3 |  
@@ -72,7 +72,7 @@ Object       Value
    |            |  
    V            V  
   NULL         NULL  
-
+```
 
 JSON example:  
 ```
@@ -80,7 +80,7 @@ JSON example:
   "name1" : "value1",
   "name2" : "value2"
 }
-```
+
 Object       Value  
 +-------+    +-------+  
 |name1  |    |type 3 |  
@@ -100,12 +100,12 @@ Object       Value
    |            |  
    V            V  
   NULL         NULL  
-
+```
 
 JSON example:  
 ```
 { "name" : ["value1","value2"] }
-```
+
 Object       Value  
 +-------+    +-------+  
 |name   |    |type 3 |  
@@ -123,12 +123,12 @@ Object       Value
                 |  
                 V  
               NULL  
-
+```
 
 JSON example:  
 ```
 { "name" : [["value1","value2"],"value3"] }
-```
+
 Object       Value         Value  
 +-------+    +-------+     +-------+  
 |name   |    |type 2 |     |type 3 |  
@@ -146,12 +146,12 @@ Object       Value         Value
                 |            |  
                 V            V  
                NULL         NULL  
-
+```
 
 JSON example:  
 ```
 { "name1" : {"name2":"value"} }
-```
+
 Object       Value        Object       Value  
 +-------+    +-------+    +-------+    +-------+  
 |name1  |    |type 1 |    |name2  |    |type 3 |  
@@ -161,4 +161,4 @@ Object       Value        Object       Value
    |            |            |  
    V            V            V  
   NULL         NULL         NULL  
-
+```
