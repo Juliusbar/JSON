@@ -1757,7 +1757,7 @@ err:
 
 struct json_object * get_object(char *S,struct json_object *O){
 	while(O){
-		if(!strncmp(O->name,S,O->n)) return O;
+		if(O->n&&(!strncmp(O->name,S,O->n+1))) return O;
 		O=O->next;
 	}
 	return 0;
